@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  taskpoints-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: taskpoints-app
+    restart: unless-stopped
+    ports:
+      - "3000:80"
